@@ -8,14 +8,20 @@
     <title>RxJS - Esempio1</title>
     <script src="https://unpkg.com/rxjs/bundles/rxjs.umd.min.js"></script>
     <script>
-        const { range } = rxjs;
-        const { map, filter } = rxjs.operators;
+        const { range, from } = rxjs;
+        const { reduce, map, filter } = rxjs.operators;
+
+        console.log(rxjs);
         //2-4-6-8-10-
         range(1, 200).pipe(
             filter(x => x % 2 === 0),
             map(x => x * x)
         ).subscribe(x => console.log(x));
 
+        from([1, 3, 4]).pipe(
+            map(x => x * x),
+            reduce((x, y) => x + y)
+        ).subscribe(x => console.log(x));
     </script>
 </head>
 
