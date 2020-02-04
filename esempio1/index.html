@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RxJS - Esempio1</title>
+    <script src="https://unpkg.com/rxjs/bundles/rxjs.umd.min.js"></script>
+    <script>
+        const { range } = rxjs;
+        const { map, filter } = rxjs.operators;
+        //2-4-6-8-10-
+        range(1, 200).pipe(
+            filter(x => x % 2 === 0),
+            map(x => x * x)
+        ).subscribe(x => console.log(x));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
