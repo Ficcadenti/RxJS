@@ -11,6 +11,17 @@ https://www.npmjs.com/package/node-fetch
 JSONPlaceholder
 https://jsonplaceholder.typicode.com/
 
+http-server
+https://www.npmjs.com/package/http-server
+
+Google-Books-APIs
+https://developers.google.com/books
+
+Bootstrap
+https://getbootstrap.com/
+
+Live-serverhttps://www.npmjs.com/package/live-server
+
 #############################################################################################################################################
 #############################################################################################################################################
 #############################################################################################################################################
@@ -25,3 +36,14 @@ tsc --init
 npm install rxjs
 npm install @types/node --save-dev
 npm install node-fetch --save
+
+######### Installazione per eventuale server globale
+npm install -g http-server
+######### Installazione per eventuale server locale
+npm install http-server 
+
+######### Installazione per eventuale server globale
+npm install -g live-server
+
+
+http-server -p 8080
