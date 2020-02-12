@@ -25,6 +25,7 @@ interface Book {
     authors: []
     categories: []
     thumbnail: string
+    previewLink: string
 }
 interface BookItem {
     volumeInfo: VolumeInfo
@@ -40,12 +41,11 @@ function getDescription(desc: string) {
 
 
 function displayBook(book: Book) {
-
-
     const bookTpl = ` <div class="card mb-4 shadow-sm">
                             <img src="${book.thumbnail}" title="${book.title}" alt="${book.title}">
                             <div class="card-body">
                             <h4>${book.title}</h4>
+                            <a href="${book.previewLink}" target="_blank">Preview</a><br>
                                 <p class="card-text">${getDescription(book.description)}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
@@ -90,20 +90,24 @@ function getBooks(booktitle: string) {
                 categories: ele.volumeInfo.categories,
                 authors: ele.volumeInfo.authors,
                 description: ele.volumeInfo.description,
-                thumbnail: ele.volumeInfo.imageLinks ? ele.volumeInfo.imageLinks.thumbnail : ''
+                thumbnail: ele.volumeInfo.imageLinks ? ele.volumeInfo.imageLinks.thumbnail : '',
+                previewLink: ele.volumeInfo.previewLink
             };
             return book;
         }
-        )
+        ), tap((ele: Book) => console.log(ele.previewLink))
     )
 
 }
 
 function cleanBooks() {
     const books = document.querySelector('#books');
+
     if (books) {
         books.innerHTML = '';
     }
+    showTotal(0);
+
 }
 
 function searckBooks() {
