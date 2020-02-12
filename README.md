@@ -1,8 +1,6 @@
 # RxJS
 Reactive Extensions Library per JavaScript - Esempi pratici
 
-
-<h1>RxJS</h2>
 <a href="https://rxjs-dev.firebaseapp.com/">https://rxjs-dev.firebaseapp.com</a><br>
 <a href="http://reactivex.io/">http://reactivex.io</a><br>
 <a href="https://rxmarbles.com/">https://rxmarbles.com</a><br>
