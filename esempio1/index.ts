@@ -5,4 +5,4 @@ import { map, filter } from './node_modules/rxjs/operators';
 range(1, 200).pipe(
     filter(x => x % 2 === 0),
     map(x => x * x)
-).subscribe(x => console.log(x));
+).subscribe(x => console.log("+++++" + x));

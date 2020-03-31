@@ -20,7 +20,8 @@ https://developers.google.com/books
 Bootstrap
 https://getbootstrap.com/
 
-Live-serverhttps://www.npmjs.com/package/live-server
+Live-server
+https://www.npmjs.com/package/live-server
 
 #############################################################################################################################################
 #############################################################################################################################################
