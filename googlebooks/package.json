@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "rxjs": "^6.5.4"
   },
   "devDependencies": {
